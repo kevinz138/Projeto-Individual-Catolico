@@ -7,6 +7,14 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -49,18 +57,37 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 28px;
+}
+
+.nav-links a::after {
+    position: absolute;
+    right: 0;
+    bottom: -11px;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: var(--dourado);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
 }
 
 .nav-item a {
     text-decoration: none;
     color: var(--branco);
     font-size: 13px;
+    position: relative;
+    display: inline-block;
 }
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 28px;
 }
 
 .btn-default a {
@@ -76,6 +103,7 @@ header {
 
 .btn-login a {
     color: var(--branco);
+    text-decoration: none;
 }
 
 .btn-cadastro {
