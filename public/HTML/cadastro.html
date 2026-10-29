@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Criar conta — Via Fidei</title>
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-aside">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span><strong>Via Fidei</strong><small>Caminho da Fé</small></span>
+        </a>
+        <div class="auth-message">
+          <p class="eyebrow light">Um passo de cada vez</p>
+          <h1>Comece a registrar<br /><em>sua história.</em></h1>
+          <p>
+            Reúna propósitos, orações e aprendizados em um lugar pensado para crescer junto com
+            a sua fé.
+          </p>
+        </div>
+        <p class="auth-verse">“Eis que faço novas todas as coisas.” <small>Ap 21,5</small></p>
+      </section>
+
+      <section class="auth-main">
+        <div class="auth-card">
+          <a class="back-link" href="./index.html">← Voltar ao início</a>
+          <p class="eyebrow">Sua caminhada</p>
+          <h2>Criar conta</h2>
+          <p class="auth-subtitle">Preencha os campos para preparar seu espaço.</p>
+
+          <form action="./dashboard.html">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+              </div>
+              <div class="form-group">
+                <label for="sobrenome">Sobrenome</label>
+                <input id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="senha">Crie uma senha</label>
+              <input id="senha" name="senha" type="password" placeholder="Mínimo de 8 caracteres" required />
+            </div>
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" name="termos" required />
+                Concordo com os termos de uso
+              </label>
+            </div>
+            <button class="button button-full" type="submit">Começar minha caminhada</button>
+          </form>
+
+          <p class="auth-switch">Já tem uma conta? <a href="./login.html">Entrar</a></p>
+          <p class="form-note">
+            Modelo visual em HTML e CSS. Os dados não são armazenados sem um backend.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

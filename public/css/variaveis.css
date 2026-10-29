@@ -1,0 +1,13 @@
+:root {
+  --azul-marinho: #172d50;
+  --azul-classico: #294a73;
+  --azul-claro: #8297b0;
+  --dourado: #c7a45b;
+  --champanhe: #e6d5ae;
+  --marfim: #f7f4ec;
+  --branco: #ffffff;
+  --cinza: #596579;
+  --texto: #182236;
+  --borda: rgba(23, 45, 80, 0.14);
+  --sombra: 0 22px 60px rgba(23, 45, 80, 0.12);
+}
