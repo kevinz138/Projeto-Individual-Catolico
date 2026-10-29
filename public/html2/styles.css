@@ -11,3 +11,196 @@
 body {
     background: var(--marfim);
 }
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+}
+
+h1 em {
+  color: var(--champanhe);
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.eucaristico,
+.sacred-heart {
+    position: absolute;
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+    justify-items: center;
+    border: 1px solid rgba(199, 164, 91, 0.4);
+    border-radius: 50%;
+    color: var(--dourado);
+}
+
+.left {
+    bottom: 36px;
+    left: 28px;
+}
+
+.right {
+    top: 70px;
+    right: 30px;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.inicio {
+    position: relative;
+    overflow: hidden;
+    min-height: 690px;
+    color: var(--branco);
+    background:
+        radial-gradient(circle at 82% 20%, rgba(130, 151, 176, 0.2), transparent 28%),
+        var(--azul-marinho);
+}
+
+.inicio-grid {
+    position: relative;
+    z-index: 2;
+    min-height: 690px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+    color: var(--champanhe);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.inicio-copy {
+    max-width: 690px;
+}
+
+.inicio-texto {
+    max-width: 610px;
+    margin-bottom: 34px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 18px;
+}
+
+.buttons-inicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-default {
+    display: inline-block;
+    padding: 14px 23px;
+    border: 1px solid var(--dourado);
+    border-radius: 999px;
+    background: var(--dourado);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    transition: 
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-default:hover {
+    background: var(--azul-classico);
+    transform: translateY(-2px);
+}
+
+.btn-default:hover a {
+    color: var(--branco);
+}
+
+.btn-default a {
+    color: var(--azul-marinho);
+}
+
+.btn-outline {
+    color: var(--branco);
+    background: transparent;
+}
+
+.btn-outline a {
+    color: var(--branco);
+}
+
+.verso {
+    margin: 38px 0 0;
+    color: var(--champanhe);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.verso span {
+    color: var(--azul-claro);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.inicio-foto {
+    position: relative;
+    padding: 20px 18px 0 0;
+}
+
+.foto-igreja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-igreja img {
+    width: 440px;
+    border: 1px solid rgba(230, 213, 174, 0.45);
+    border-radius: 240px 240px 32px 32px;
+}
+
+.foto-frase {
+    position: absolute;
+    right: -22px;
+    bottom: -22px;
+    width: 128px;
+    height: 128px;
+    display: grid;
+    place-content: center;
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    color: var(--dourado);
+    background: var(--azul-marinho);
+    text-align: center;
+}
+
+.foto-frase span {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.foto-frase strong,
+.foto-frase small {
+    font-size: 8px;
+    letter-spacing: 0.14em;
+}

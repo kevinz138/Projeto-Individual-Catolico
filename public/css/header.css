@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    padding: 24px;
+    padding: 20px;
     background-color: var(--azul-marinho);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -19,6 +19,10 @@ header {
     font-weight: 400;
     line-height: 1;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo-container img {
+    width: 40px;
 }
 
 .logo-container small {
@@ -39,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 24px;
+    margin: 0px 120px;
 }
 
 .nav-links {
@@ -75,7 +79,7 @@ header {
 }
 
 .btn-cadastro {
-    border: none;
+    border: 1px solid var(--dourado);
     display: flex;
     align-items: center;
     justify-content: center;
