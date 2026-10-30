@@ -12,6 +12,21 @@ body {
     background: var(--marfim);
 }
 
+h1, 
+h2, 
+h3, 
+p {
+  margin-top: 0;
+}
+
+section {
+    padding: 110px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 h1,
 h2,
 h3 {
@@ -26,11 +41,22 @@ h1 {
     letter-spacing: -0.04em;
 }
 
-h1 em {
-  color: var(--champanhe);
-  font-weight: 400;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+h2 {
+    margin-bottom: 20px;
+    color: var(--azul-marinho);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
 }
+
+h1 em {
+    color: var(--champanhe);
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Parte início */
 
 .eucaristico,
 .sacred-heart {
@@ -81,13 +107,13 @@ h1 em {
     padding-bottom: 55px;
 }
 
-.eyebrow {
+.eyebrow-light {
     margin-bottom: 16px;
-    color: var(--champanhe);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
+    color: var(--champanhe);
 }
 
 .inicio-copy {
@@ -117,7 +143,7 @@ h1 em {
     font-weight: 700;
     letter-spacing: 0.04em;
     text-align: center;
-    transition: 
+    transition:
         background 0.2s ease,
         color 0.2s ease,
         transform 0.2s ease;
@@ -203,4 +229,121 @@ h1 em {
 .foto-frase small {
     font-size: 8px;
     letter-spacing: 0.14em;
+}
+
+/* Parte minha fé */
+
+.faith-intro {
+    position: relative;
+    background:
+        linear-gradient(90deg, transparent 49.95%, var(--borda) 50%, transparent 50.05%),
+        var(--marfim);
+}
+
+.minhafe {
+    max-width: 940px;
+    text-align: center;
+}
+
+.centrotexto {
+    color: var(--cinza);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    line-height: 1.65;
+    margin-bottom: 26px;
+}
+
+.simple-link,
+.pilar-card a {
+    color: var(--azul-classico);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.eyebrow-dourado {
+    margin-bottom: 16px;
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.simple-link span {
+    margin-left: 8px;
+    color: var(--dourado);
+}
+
+/* Parte pilar */
+
+.pilares {
+    background: var(--branco);
+}
+
+.pilar-header {
+    margin-bottom: 55px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    justify-content: center;
+    align-items: end;
+    gap: 80px;
+}
+
+.pilar-header > p {
+    color: var(--cinza);
+    margin-bottom: 30px;
+}
+
+.pilar-header h2 {
+    margin-bottom: 0;
+}
+
+.pilar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pilar-card {
+    position: relative;
+    min-height: 370px;
+    padding: 42px 34px;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background: var(--marfim);
+}
+
+.pilar-card.jesus {
+    color: var(--branco);
+    background: var(--azul-marinho);
+}
+
+.pilar-card.jesus h3,
+.pilar-card.jesus a {
+    color: var(--branco);
+}
+
+.pilar-card.jesus p {
+    color: rgba(255, 255, 255, 0.67);
+}
+
+.pilar-card p {
+    color: var(--cinza);
+}
+
+.card-number {
+    position: absolute;
+    top: 24px;
+    right: 25px;
+    color: var(--azul-claro);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+}
+
+.eucharist-icon,
+.mary-icon,
+.medal-icon {
+    
 }
