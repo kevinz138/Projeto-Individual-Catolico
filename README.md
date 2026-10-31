@@ -98,14 +98,13 @@ Os logos seguem um estilo dourado, com a cor principal **#c7a45b**, e estão em 
 ## 📁 Estrutura do repositório
 
 ```
-Projeto-Individual-HK/
+Projeto-Individual-Catolico/
 ├── DOCUMENTOS_DE_APOIO/
 ├── public/
 │   ├── assets/
 │   ├── css/
 │   ├── dashboard/
 │   ├── HTML/
-│   ├── html2/
 │   └── imgs/        logos em SVG e fotos do projeto
 └── README.md
 ```
