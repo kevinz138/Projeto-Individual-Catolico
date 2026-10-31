@@ -12,11 +12,11 @@ body {
     background: var(--marfim);
 }
 
-h1, 
-h2, 
-h3, 
+h1,
+h2,
+h3,
 p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 section {
@@ -29,7 +29,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+blockquote {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -61,6 +62,10 @@ h1 em {
     color: var(--champanhe);
     font-weight: 400;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.section {
+    padding: 110px 0;
 }
 
 /* Parte início */
@@ -298,7 +303,7 @@ h1 em {
     gap: 80px;
 }
 
-.pilar-header > p {
+.pilar-header>p {
     color: var(--cinza);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -377,4 +382,51 @@ h1 em {
 .medal-icon {
     outline: 1px solid rgba(199, 164, 91, 0.5);
     outline-offset: 5px;
+}
+
+/* Parte Chiara */
+
+.chiara {
+    color: var(--branco);
+    background: var(--azul-classico);
+}
+
+.chiara-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.chiara-foto img {
+    width: 400px;
+    border-radius: 240px 240px 34px 34px;
+    box-shadow: 24px 24px 0 rgba(23, 45, 80, 0.5);
+}
+
+.chiara h2 {
+    color: var(--branco);
+}
+
+.chiara blockquote {
+    margin: 30px 0;
+    padding: 0 0 0 30px;
+    border-left: 2px solid var(--dourado);
+    color: var(--champanhe);
+    font-size: 33px;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.chiara-textos > p:not(.eyebrow-light) {
+    max-width: 590px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    line-height: 1.50;
+}
+
+.btn-cream {
+    border-color: var(--champanhe);
+    background: var(--champanhe);
 }
