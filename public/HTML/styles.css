@@ -45,7 +45,7 @@ h1 {
 h2 {
     margin-bottom: 20px;
     color: var(--azul-marinho);
-    font-size: clamp(36px, 4vw, 56px);
+    font-size: 58px;
     font-weight: 400;
     line-height: 1.08;
     letter-spacing: -0.03em;
@@ -68,10 +68,9 @@ h1 em {
     padding: 110px 0;
 }
 
-/* Parte início */
-
 .eucaristico,
-.sacred-heart {
+.sacred-heart,
+.espirito-santo {
     position: absolute;
     z-index: 3;
     width: 90px;
@@ -79,23 +78,53 @@ h1 em {
     justify-items: center;
     border: 1px solid rgba(199, 164, 91, 0.4);
     border-radius: 50%;
-    color: var(--dourado);
 }
 
 .left {
-    bottom: 36px;
-    left: 28px;
+    bottom: 86px;
+    left: 90px;
 }
 
 .right {
     top: 70px;
-    right: 30px;
+    right: 90px;
+}
+
+.pomba {
+    top: 70px;
+    right: 90px;
 }
 
 .container {
     width: 1180px;
     margin: 0 auto;
 }
+
+.eyebrow-dourado {
+    margin-bottom: 16px;
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.eyebrow-light {
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--champanhe);
+}
+
+/* 
+------------------------------
+            HOME
+------------------------------
+*/
+
+/* Parte início */
 
 .inicio {
     position: relative;
@@ -117,15 +146,6 @@ h1 em {
     gap: 80px;
     padding-top: 55px;
     padding-bottom: 55px;
-}
-
-.eyebrow-light {
-    margin-bottom: 16px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--champanhe);
 }
 
 .inicio-copy {
@@ -274,15 +294,6 @@ h1 em {
     text-transform: uppercase;
 }
 
-.eyebrow-dourado {
-    margin-bottom: 16px;
-    color: var(--dourado);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-}
-
 .simple-link span {
     margin-left: 8px;
     color: var(--dourado);
@@ -298,12 +309,11 @@ h1 em {
     margin-bottom: 55px;
     display: grid;
     grid-template-columns: 1fr 0.6fr;
-    justify-content: center;
     align-items: end;
     gap: 80px;
 }
 
-.pilar-header>p {
+.pilar-header > p {
     color: var(--cinza);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -537,7 +547,7 @@ h1 em {
     text-decoration: none;
 }
 
-.footer-grid > div > strong {
+.footer-grid>div>strong {
     margin-bottom: 6px;
     color: var(--champanhe);
     font-size: 11px;
@@ -554,4 +564,64 @@ h1 em {
     font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+/* 
+------------------------------
+          HISTORIA
+------------------------------
+*/
+
+/* Parte Início */
+
+.inner-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 0 100px;
+    color: var(--branco);
+    background: var(--azul-marinho);
+    text-align: center;
+}
+
+.inner-hero h1 {
+    max-width: 870px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inner-hero p:last-child {
+    max-width: 790px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 17px;
+}
+
+/* Página de storytelling */
+
+.story-intro {
+    padding-bottom: 65px;
+    background: var(--branco);
+}
+
+.story-intro-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 90px;
+}
+
+.story-lead {
+    color: var(--azul-classico);
+    font-family: Georgia, serif;
+    font-size: 30px;
+    line-height: 1.45;
+}
+
+.story-copy {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.story-copy p:first-child {
+    margin-bottom: 20px;
 }
