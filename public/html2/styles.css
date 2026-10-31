@@ -50,6 +50,13 @@ h2 {
     letter-spacing: -0.03em;
 }
 
+h3 {
+    color: var(--azul-marinho);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
 h1 em {
     color: var(--champanhe);
     font-weight: 400;
@@ -294,6 +301,7 @@ h1 em {
 .pilar-header > p {
     color: var(--cinza);
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .pilar-header h2 {
@@ -331,6 +339,11 @@ h1 em {
 
 .pilar-card p {
     color: var(--cinza);
+    margin-bottom: 28px;
+}
+
+.pilar-card h3 {
+    margin-bottom: 38px;
 }
 
 .card-number {
@@ -345,5 +358,23 @@ h1 em {
 .eucharist-icon,
 .mary-icon,
 .medal-icon {
-    
+    width: 72px;
+    height: 72px;
+    margin-bottom: 55px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    color: var(--dourado);
+    font-family: Georgia, serif;
+}
+
+.mary-icon {
+    border-radius: 50% 50% 45% 45%;
+    font-size: 29px;
+}
+
+.medal-icon {
+    outline: 1px solid rgba(199, 164, 91, 0.5);
+    outline-offset: 5px;
 }
