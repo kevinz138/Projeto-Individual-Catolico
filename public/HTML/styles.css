@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('../css/variaveis.css');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
     background: var(--marfim);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 h1,
@@ -313,7 +313,7 @@ h1 em {
     gap: 80px;
 }
 
-.pilar-header > p {
+.pilar-header>p {
     color: var(--cinza);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -547,7 +547,7 @@ h1 em {
     text-decoration: none;
 }
 
-.footer-grid>div>strong {
+.footer-grid > div > strong {
     margin-bottom: 6px;
     color: var(--champanhe);
     font-size: 11px;
@@ -613,15 +613,130 @@ h1 em {
     color: var(--azul-classico);
     font-family: Georgia, serif;
     font-size: 30px;
-    line-height: 1.45;
 }
 
 .story-copy {
     color: var(--cinza);
     font-size: 17px;
-    line-height: 1.75;
 }
 
 .story-copy p:first-child {
     margin-bottom: 20px;
+}
+
+/* Parte corda central */
+
+.story-timeline {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 0;
+    background:
+        linear-gradient(90deg, transparent 49.95%, rgba(23, 45, 80, 0.04) 50%, transparent 50.5%);
+}
+
+.story-timeline::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    width: 18px;
+    border: 2px solid #6e4528;
+    border-radius: 999px;
+    content: "";
+
+    /* Gradiente da corda */
+    background:
+        repeating-linear-gradient(7deg,
+            transparent 0,
+            transparent 17px,
+            rgba(73, 39, 18, 0.32) 18px,
+            transparent 21px),
+        linear-gradient(90deg, #7c4d2d 0%, #bd8654 28%, #8b5732 55%, #5f371f 100%);
+    box-shadow:
+        inset 3px 0 4px rgba(255, 255, 255, 0.2),
+        inset -3px 0 4px rgba(49, 24, 10, 0.36),
+        0 4px 12px rgba(23, 45, 80, 0.2);
+    transform: translateX(-50%);
+}
+
+/* Parte das fotos com texto */
+
+.story-chapter {
+    position: relative;
+    padding: 80px 0;
+    background: transparent;
+}
+
+/* Deix os elementos ímpares da div pai de outra cor */
+.story-chapter:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.chapter-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 130px;
+}
+
+.chapter-grid::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    border: 6px solid var(--marfim);
+    border-radius: 50%;
+    content: "";
+    background:
+        radial-gradient(circle at 38% 35%, #d6a36f 0 12%, transparent 13%),
+        radial-gradient(circle, #9b6238 0 32%, #6e4024 34% 100%);
+    box-shadow: 
+        0 0 0 2px #5f371f,
+        0 8px 18px rgba(23, 45, 80, 0.24);
+    transform: translate(-50%, -50%);
+}
+
+.chapter-grid.reverse .chapter-foto {
+    order: 2;
+}
+
+.chapter-foto img {
+    width: 440px;
+    height: 540px;
+    border-radius: 210px 210px 32px 32px;
+    box-shadow: 18px 18px 0 var(--champanhe);
+}
+
+.chapter-number {
+    color: var(--dourado);
+    font-family: Georgia, serif;
+    font-size: 56px;
+    line-height: 1;
+}
+
+.chapter-copy p {
+    color: var(--cinza);
+    margin-bottom: 18px;
+}
+
+.chapter-copy {
+    padding: 38px;
+    border: 1px solid var(--borda);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: var(--sombra);
+}
+
+.chapter-copy p:last-child {
+    margin-top: 28px;
+    padding: 24px 0 24px 28px;
+    border-left: 2px solid var(--dourado);
+    color: var(--azul-classico);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
 }
