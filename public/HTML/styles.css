@@ -313,7 +313,7 @@ h1 em {
     gap: 80px;
 }
 
-.pilar-header>p {
+.pilar-header > p {
     color: var(--cinza);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -668,7 +668,7 @@ h1 em {
     background: transparent;
 }
 
-/* Deix os elementos ímpares da div pai de outra cor */
+/* Deixa os elementos ímpares da div pai de outra cor */
 .story-chapter:nth-child(odd) {
     background: rgba(255, 255, 255, 0.5);
 }
