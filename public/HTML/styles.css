@@ -83,12 +83,12 @@ h1 em {
 
 .left {
     bottom: 86px;
-    left: 90px;
+    left: 50px;
 }
 
 .right {
     top: 70px;
-    right: 90px;
+    right: 50px;
 }
 
 .container {
@@ -758,7 +758,7 @@ h1 em {
 
 /* Parte Inicial */
 
-.dedication-inicio {
+.dedication-topo {
     position: relative;
     overflow: hidden;
     padding: 115px 0;
@@ -769,7 +769,7 @@ h1 em {
         var(--azul-marinho);
 }
 
-.dedication-inicio::after {
+.dedication-topo::after {
     position: absolute;
     right: -180px;
     bottom: -360px;
@@ -780,7 +780,7 @@ h1 em {
     content: "";
 }
 
-.dedication-inicio-grid {
+.dedication-topo-grid {
     position: relative;
     z-index: 2;
     display: grid;
@@ -789,11 +789,11 @@ h1 em {
     gap: 90px;
 }
 
-.dedication-inicio-grid h1 {
+.dedication-topo-grid h1 {
     max-width: 820px;
 }
 
-.dedication-inicio-grid p:last-child {
+.dedication-topo-grid p:last-child {
     max-width: 630px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 17px;
@@ -831,4 +831,28 @@ h1 em {
     font-size: 8px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+}
+
+/* Parte Introdução */
+
+.dedication-intro {
+    background: var(--branco);
+}
+
+.dedication-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 100px;
+}
+
+.dedication-intro-grid h2 {
+    margin-bottom: 0;
+}
+
+.dedication-intro-copy {
+    padding-left: 35px;
+    border-left: 2px solid var(--dourado);
+    color: var(--cinza);
+    font-size: 17px;
 }
