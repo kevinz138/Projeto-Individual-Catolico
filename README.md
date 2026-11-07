@@ -123,7 +123,7 @@ Os SVGs escalam sem perder qualidade e têm fundo transparente, então funcionam
 
 ## 🔗 Fontes principais
 
--- [Catecismo da Igreja Católica (Santa Sé)](http://www.vatican.va/archive/cathechism_po/index_new/prima-pagina-cic_po.html)
+- [Catecismo da Igreja Católica (Santa Sé)](http://www.vatican.va/archive/cathechism_po/index_new/prima-pagina-cic_po.html)
 - [Compêndio do Catecismo da Igreja Católica](https://www.vatican.va/content/benedict-xvi/pt/motu_proprio/documents/hf_ben-xvi_motu-proprio_20050628_compendio-catechismo.html)
 - [Dei Verbum, constituição dogmática sobre a revelação divina](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_po.html)
 - [Lumen Gentium, constituição dogmática sobre a Igreja](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_po.html)
