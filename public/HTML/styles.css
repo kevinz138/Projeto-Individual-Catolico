@@ -856,3 +856,123 @@ h1 em {
     color: var(--cinza);
     font-size: 17px;
 }
+
+/* Parte fotos */
+
+.section-heading {
+    margin-bottom: 55px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    align-items: end;
+    gap: 80px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.section-heading > p {
+    color: var(--cinza)
+}
+
+.dedication-foto {
+    min-height: 360px;
+}
+
+.portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 28px;
+}
+
+.portrait-card {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.portrait-card figcaption {
+    padding: 38px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.portrait-card figcaption > span {
+    color: var(--dourado);
+    font-family: Georgia, serif;
+    font-size: 29px;
+}
+
+.portrait-card h3 {
+    margin-bottom: 13px;
+}
+
+.portrait-card p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+.gratidao-inicio {
+    color: var(--branco);
+    background: var(--azul-classico);
+}
+
+.gratidao-inicio .religious-seal {
+    margin: 0 auto 27px;
+}
+
+.gratidao-inicio blockquote {
+    margin: 15px 0;
+    color: var(--champanhe);
+    font-size: 48px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.gratidao-inicio small {
+    color: var(--azul-claro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.gratidao-final {
+    background: var(--champanhe);
+}
+
+.gratidao-note {
+    padding: 48px;
+    border-radius: 28px;
+    color: var(--branco);
+    background: var(--azul-marinho);
+    box-shadow: var(--sombra);
+}
+
+.gratidao-note p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.gratidao-note .signature {
+    margin: 22px 0 0;
+    color: var(--champanhe);
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.gratidao-note img {
+    width: 53px;
+    height: 63px;
+    margin-bottom: 24px;
+}
+
+.text-center {
+    text-align: center;
+    max-width: 850px;
+}
