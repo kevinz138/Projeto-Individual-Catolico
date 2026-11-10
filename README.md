@@ -2,7 +2,7 @@
 
 <img src="public/imgs/logo-cruz.svg" alt="Cruz" width="90">
 
-# A Fé Católica
+# Via Fidei
 
 **Um só Deus, a Igreja e os santos**
 
