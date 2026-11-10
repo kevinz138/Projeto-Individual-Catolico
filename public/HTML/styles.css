@@ -976,3 +976,166 @@ h1 em {
     text-align: center;
     max-width: 850px;
 }
+
+/* 
+------------------------------
+        LOGIN/CADASTRO
+------------------------------
+*/
+
+/* Parte lateral esquerda */
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: var(--branco);
+}
+
+.auth-aside {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 55px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--branco);
+    background: 
+        radial-gradient(circle at 15% 85%, rgba(199, 164, 91, 0.24),
+        transparent 24%),
+        var(--azul-marinho);
+}
+
+.auth-aside::after {
+    position: absolute;
+    right: -170px;
+    bottom: -130px;
+    width: 470px;
+    height: 470px;
+    border: 1px solid rgba(230, 213, 174, 0.2);
+    border-radius: 50%;
+    content: "";
+}
+
+.auth-message {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.auth-message .eyebrow-light {
+    color: var(--champanhe);
+}
+
+.auth-message h1 {
+    font-size: 68px;
+}
+
+.auth-message p{
+    color: rgba(255, 255, 255, 0.67);
+    font-size: 16px;
+}
+
+.auth-verse {
+    position: relative;
+    z-index: 2;
+    max-width: 430px;
+    color: var(--champanhe);
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Parte da Direita */
+
+.auth-main {
+    min-height: 100;
+    padding: 55px 8%;
+    display: grid;
+    place-items: center;
+}
+
+.auth-card {
+    width: 460px;
+    padding: 38px;
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 45px;
+    color: var(--azul-classico);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.auth-card h2 {
+    margin-bottom: 10px;
+    font-size: 43px;
+}
+
+.auth-subtitle {
+    margin-bottom: 35px;
+    color: var(--cinza);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--azul-marinho);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    outline: none;
+    color: var(--texto);
+    background: var(--marfim);
+    font: inherit;
+}
+
+input:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 3px rgba(199, 164, 91, 0.16);
+}
+
+.auth-switch {
+    margin-top: 25px;
+    color: var(--cinza);
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: var(--azul-classico);
+    font-weight: 700;
+}
+
+.btn-entrar {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+}

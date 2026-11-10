@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="shortcut icon" href="../imgs/logo-cruz.svg" type="image/x-icon">
+    <title>Dedicatória — Via Fidei</title>
+</head>
+
+<body>
+    <main class="auth-page">
+        <section class="auth-aside">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="../imgs/logo-cruz.svg" alt="">
+                    <div class="titulo">
+                        <strong>Via Fidei</strong>
+                        <small>Caminho da fé</small>
+                    </div>
+                </a>
+            </div>
+            <div class="auth-message">
+                <p class="eyebrow-light">Bem-vindo de volta</p>
+                <h1>Retome sua <br><em>caminhada.</em></h1>
+                <p>
+                    Volte ao seu espaço de oração, formação e memória. Cada pequeno passo pode nos
+                    conduzir mais perto de Deus.
+                </p>
+            </div>
+            <p class="auth-verse">“A tua palavra é lâmpada para os meus pés.” <small>Sl 119,105</small></p>
+        </section>
+        <section class="auth-main">
+            <div class="auth-card">
+                <a href="index.html" class="back-link">← Voltar ao início</a>
+                <p class="eyebrow-dourado">Sua conta</p>
+                <h2>Entrar</h2>
+                <p class="auth-subtitle">Digite seus dados para acessar a caminhada.</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button class="btn-default btn-entrar">
+                        <a href="">Entrar na minha conta</a>
+                    </button>
+                </form>
+                <p class="auth-switch">
+                    Ainda não tem conta? <a href="cadastro.html">Criar conta</a>
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+<script>
+    function entrar() {
+        aguardar();
+
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+</script>
