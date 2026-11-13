@@ -1050,7 +1050,7 @@ h1 em {
 /* Parte da Direita */
 
 .auth-main {
-    min-height: 100;
+    min-height: 100vh;
     padding: 55px 8%;
     display: grid;
     place-items: center;
