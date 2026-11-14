@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="shortcut icon" href="../imgs/logo-cruz.svg" type="image/x-icon">
+    <script src="../js/sessao.js"></script>
     <title>Dedicatória — Via Fidei</title>
 </head>
 
@@ -48,8 +49,8 @@
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" placeholder="Digite sua senha" required>
                     </div>
-                    <button class="btn-default btn-entrar">
-                        <a href="">Entrar na minha conta</a>
+                    <button class="btn-default btn-entrar" onclick="entrar()" type="button">
+                        Entrar na minha conta
                     </button>
                 </form>
                 <p class="auth-switch">
@@ -63,23 +64,13 @@
 </html>
 <script>
     function entrar() {
-        aguardar();
-
         var emailVar = email.value;
         var senhaVar = senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            alert("Não pode haver nehum campo em branco");
-            finalizarAguardar();
+            alert("Não pode haver nenhum campo em branco");
             return false;
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -91,42 +82,27 @@
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
 
             if (resposta.ok) {
-                console.log(resposta);
-
                 resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
+                    window.location = "/dashboard/sacramentos.html";
                 });
 
             } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
                 resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
+                    alert("Erro no login: " + texto);
                 });
             }
 
         }).catch(function (erro) {
             console.log(erro);
+            alert("Não foi possível conectar ao servidor.");
         })
 
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 </script>
