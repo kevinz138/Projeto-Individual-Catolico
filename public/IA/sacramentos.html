@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu caminho dos sacramentos — Via Fidei</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="dashboard-body data-dashboard" data-page="sacraments">
+    <header class="site-header dashboard-site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"><span></span></span><span><strong>Via Fidei</strong><small>Caminho da Fé</small></span></a>
+        <nav class="main-nav" aria-label="Navegação principal"><a href="./index.html">Início</a><a href="./historia.html">Nossa fé</a><a href="./dedicatoria.html">Dedicatória</a></nav>
+        <div class="nav-actions"><a class="text-link" href="./index.html">Voltar ao site</a><span class="dashboard-avatar">MF</span></div>
+      </div>
+    </header>
+    <header class="data-hero">
+      <span class="corner-symbol data-symbol" aria-hidden="true">SC</span>
+      <p class="data-kicker">Meu caminho dos sacramentos</p>
+      <h1>Onde estou no meu <em>caminho?</em></h1>
+      <p>Marque os sacramentos que já recebeu e compare com a caminhada da comunidade.</p>
+      <nav class="data-nav" aria-label="Dashboards">
+        <a href="./dashboard.html">Corrente de oração</a><a class="active" href="./sacramentos.html">Meu caminho</a><a href="./calendario.html">Calendário litúrgico</a><a href="./quaresma.html">Quaresma</a>
+      </nav>
+    </header>
+
+    <main class="data-main">
+      <div class="sacrament-layout">
+        <form class="input-card" id="sacrament-form">
+          <span class="card-number">01</span>
+          <h2>Marque o que já recebeu</h2>
+          <div class="check-list">
+            <label><input type="checkbox" value="Batismo" checked /> Batismo</label>
+            <label><input type="checkbox" value="Eucaristia" checked /> Eucaristia</label>
+            <label><input type="checkbox" value="Reconciliação" /> Reconciliação</label>
+            <label><input type="checkbox" value="Crisma" /> Crisma</label>
+            <label><input type="checkbox" value="Matrimônio" /> Matrimônio</label>
+            <label><input type="checkbox" value="Ordem" /> Ordem</label>
+            <label><input type="checkbox" value="Unção" /> Unção</label>
+          </div>
+          <button type="submit">Salvar</button>
+          <p class="form-feedback" id="sacrament-feedback" aria-live="polite"></p>
+        </form>
+        <section class="data-card"><span class="card-number">02</span><h2>Seu caminho e o da comunidade</h2>
+          <div class="canvas-wrap radar">
+            <canvas id="sacrament-radar"></canvas>
+          </div>
+        </section>
+        <section class="data-card full"><span class="card-number">03</span><h2>Quantos já receberam cada sacramento?</h2><div class="canvas-wrap tall"><canvas id="sacrament-bars"></canvas></div></section>
+      </div>
+      <p class="demo-note">Dados demonstrativos. As escolhas ficam somente nesta página até você conectar o formulário ao seu banco.</p>
+    </main>
+    <footer class="data-dashboard-footer"><span>Via Fidei · Minha caminhada</span><a href="./dedicatoria.html">Quem inspira este caminho →</a></footer>
+    <script src="./vendor/chart.umd.js"></script>
+    <script src="./dashboard-charts.js"></script>
+  </body>
+</html>
